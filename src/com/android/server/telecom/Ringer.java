@@ -457,7 +457,7 @@ public class Ringer {
             };
             deferBlockOnRingingFuture = true;  // Run in vibrationLogic.
             if (ringtoneSupplier != null) {
-                mRingtonePlayer.play(ringtoneSupplier, afterRingtoneLogic);
+                mRingtonePlayer.play(ringtoneSupplier, afterRingtoneLogic, isHfpDeviceAttached);
             } else {
                 afterRingtoneLogic.accept(/* ringtone= */ null, /* stopped= */ false);
             }
